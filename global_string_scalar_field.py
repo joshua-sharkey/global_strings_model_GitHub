@@ -193,7 +193,7 @@ if __name__ == "__main__":
     # initial conditions
     # NB: found using empirically tested method, do not need to specify yourself
     r_0 = step_size # starting value of r
-    f_0 = find_f0(r_0,r_max,step_size,system,get_g0_given_n,(r_0/10)**n,((r_0/10)**n)*10) # f initial condition
+    f_0 = find_f0(r_0,r_max,step_size,system,get_g0_given_n,(r_0*np.sqrt(lam)/10)**n,((r_0*np.sqrt(lam)/10)**n)*10) # f initial condition
     g_0 = get_g0_given_n(r_0,f_0) # g = f' initial condition
     
     # call rk4
